@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Формы заявки на работу в зоопарк</h1>
+    <p><i>Пожалуйста заполните форму. Обязательные поля помечены</i></p>
+    <form action="http://fe.it-academy.by/TestForm.php" method="get">
+        <fieldset>
+            <legend>Контактная информация</legend>
+            <label>Имя</label>
+            <input type="text" name="Name"><br>
+            <br>
+            <label>Телефон</label>
+            <input type="number" name="phone"><br>
+            <br>
+            <label>Email</label>
+            <input type="email" name="email">
+        </fieldset>
+        <fieldset>
+            <legend>Персональная информация</legend>
+            <label>Возраст</label>
+            <input type="number" name="Old"><br>
+            <br>
+            <label>Пол</label>
+            <select name="Gender">
+                <option value="1">Женский</option>
+                <option value="2">Мужской</option>
+            </select>
+            <br>
+            <label>Перечислите личные качества</label>
+            <textarea name="Text" cols="40" rows="10"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Выберите ваших любимых животных</legend>
+            <input type="checkbox" name="animal"> зебра
+            <input type="checkbox" name="animal"> кошак
+            <input type="checkbox" name="animal"> анаконда
+            <input type="checkbox" name="animal"> человек
+            <br>
+            <input type="checkbox" name="animal">слон
+            <input type="checkbox" name="animal">антилопа
+            <input type="checkbox" name="animal"> голубь
+            <input type="checkbox" name="animal"> краб
+        </fieldset>
+        <input type="submit" value="Отправить информацию">
+    </form>
+    <img src="машина.png" alt="avto">
+    <!-- используется в градиенте более 256 цветов, прозрачность +-->
+    <p>за рулём сижу довольный</p>
+    <img src="поезд.jpg" alt="train">
+    <!-- прозрачность нет, градинта больше 256 мало весит-->
+    <p>поезд</p>
+    <img src="краски.gif" alt="color">
+    <!-- Прозрачность + малоцветность без градиента-->
+    <p>Краси</p>
+
+</body>
+</html>
