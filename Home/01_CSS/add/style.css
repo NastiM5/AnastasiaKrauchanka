@@ -1,22 +1,29 @@
-h3{
+.size{
+    width: 900px;
+    
+}
+h4{
     text-align: right;
 
 }
 address{
     text-align: right;
     font-style: italic;
-}
+    }
 .cap{
     text-align: right;
+    margin: 3px;
 }
-h2{
+h3{
     font-family: bad script;
     text-indent: 30px;
+    text-decoration-line: underline;
 }
 .text{
     font-family: bad script;
     text-indent: 30px;
 }
 pre{
+    line-height:40px;
     font-family: 'Times New Roman', Times, serif;
 }
