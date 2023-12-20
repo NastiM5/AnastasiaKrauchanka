@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first{
+            background-color: rgb(185, 183, 183);
+        }
+        
+        .a {
+            float: left;
+            width: 15em;
+            background-color: rgb(139, 138, 138);
+        }
+
+        .b {
+            margin-left: 15em;
+            background-color: dimgray;
+            margin-bottom:.2em;
+        }
+
+        .image{
+               float:right;
+        }
+
+        .clear{
+            clear: both;
+        }
+        .down{background-color: rgb(139, 138, 138);
+        }
+
+        h3{margin-top: 0em;
+            margin-bottom: 0em;}
+        p{margin-top: 0em;
+            margin-bottom: 0em;}
+    </style>
+</head>
+
+<body>
+    <div class="first">
+        <div class="a">
+            <h3>Блок навигации</h3>
+            <ul>
+                <li>Ширина 15 em</li>
+                <li>Должен присутствовать цвет фона</li>
+                <li>располагается слева</li>
+                <li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватываьб вторую
+                    статью, как показано в данном примереБлок навигации наполните контентом достаточным, чтобы по высоте
+                    он начинал захватываьб вторую статью, как показано в данном примере</li>
+            </ul>
+        </div>
+        <div >
+            <div class="b">
+            <h3> Статья 1</h3>
+            <p>Размер блока: <br>
+                занимает всю доступную ширину <br>
+                Должен присутствовать цвет фона <br>
+                Во всех статьях сделайте отступ снизу от соседней равной .2 em при помощи свойства margin-bottom</p>
+            </div>
+            <div class="b" >
+            <h3> Статья 2</h3>
+            <p>Размер блока: <br>
+                занимает всю доступную ширину <br>
+                Должен присутствовать цвет фона <br>
+                Во всех статьях сделайте отступ снизу от соседней равной .2 em при помощи свойства margin-bottom.
+                <br>
+                картинка вставлена при помощи тега, плавание организованно по правому краю внутри данной статьи для
+                этой
+                картинки.
+            </p>
+            <img src="Без названия.jpg" alt="not" class="image">
+            <div class="clear"></div>
+            </div>
+        </div>
+        <div class="down">Нижний блок</div>
+
+    </div>
+
+</body>
+
+</html>
