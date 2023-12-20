@@ -1,0 +1,18 @@
+.body{
+    width: 350px;
+}
+.a{
+    font-weight: bold;
+    list-style-type: upper-roman;
+}
+.b{
+    font-weight: lighter;
+    list-style-type: lower-roman;
+}
+.code{
+    background-color: black;
+    color: green;
+    width: 400px;
+    overflow: auto;
+    max-height: 74px ;
+}
