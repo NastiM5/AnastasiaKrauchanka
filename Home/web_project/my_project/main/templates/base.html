@@ -1,0 +1,93 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+
+        {% block title %}
+        {% endblock %}
+
+    </title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <style>
+        body {
+            background-image: url("{% static 'main/img/doberman_3.jpg' %}");
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="head">
+        <a href=" {% url 'test_test' %}">
+            <div class="a"> Home </div>
+        </a>
+        <a href=" {% url 'price_list' %}">
+            <div class="a"> Price </div>
+        </a>
+        <a href=" {% url 'review_list' %}">
+            <div class="a"> Reviews </div>
+        </a>
+        <a href="#cont">
+            <div class="a"> Contacts  </div>
+        </a>
+    </div>
+
+    <a href=" {% url 'test_test' %}">
+        <div class="c"><img src="{% static 'main/img/logo-removebg-preview.png' %}" , width="50%"></div>
+    </a>
+
+    {% if user.is_authenticated %}
+    <h3 class="c">Hello, {{user.get_username}}</h3>
+    <h3 class="c"><form method="post" action="{% url 'logout' %}?next={{request.path}}">
+        {% csrf_token %}
+        <button type="submit">Log out</button>
+      </form></h3>
+      {% if perms.main.add_post %}
+      {% endif %}
+
+    {% else %}
+    <h3><a href="{% url 'login' %}?next={{request.path}}" class="c">Log in</a></h3>
+    {% endif %}
+
+
+    <div class="clear"></div>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+
+    <div class="clear"></div>
+    <div class="finish">
+        <h2 id = 'cont'>Contacts</h2>
+        <div class="contact">
+            <p>Phone <br>
+                +3750000000<br>
+                +3750000000</p>
+        </div>
+        <div class="contact">
+            <p>Address <br>
+                Minsk,
+                st. Kalvariyskaya 33</p>
+        </div>
+
+        <div class="Contact">
+            <p>Working hours<br>
+                09:00 - 21:00
+                Seven days a week</p>
+        </div>
+        <div class="contact">
+            <p>Email<br>
+                mmmmmmmm@te.st</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

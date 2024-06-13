@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Happy dog
+{% endblock %}
+
+
+{% block content %}
+<h2>We provide services such as dog training, walking and hostel</h2>
+<h2>Dog training</h2>
+<p> Our definition of dog training is: “A process where you motivate your dog, to do what you want, at your
+   request, while having fun.” There are some very important words in this definition, so let me break it down
+   and explain. <br>
+   Dog training is first and foremost a process. Your dog will never stop learning, so you can never stop
+   teaching. This does not mean you and your dog need to be in a training class forever, but it does mean you
+   need to remember your dog is always learning, either good habits or bad ones. Also, once you teach dogs
+   something you must continue to have them use it, or they will lose it over time.
+</p>
+
+<h2>Walking</h2>
+<p>Walking your dog is a simple task that has a positive impact on many aspects of overall health, such as:
+   <br>
+   Weight and Body Condition: Obesity is a major health issue, but barring medical complications, it has a
+   reasonable solution: burn more calories than consumed. Regular exercise, like walking, is a good way to burn
+   those excess calories and keep the pounds off – for both you and your dog. <br>
+   Joint Health: Immobility is another common health problem. Joints, even old ones, need to work. People and
+   pets get stiff when sedentary for too long, and keeping joints in motion improves their function. Not to
+   mention, mobility also helps keep muscles active, preventing them from weakening. <br>
+   Digestive and Urinary Health: Regular walking helps regulate the digestive tract. Some dogs, like some
+   people, prefer to “go” on a schedule and providing your dog with routine trips outdoors prevents
+   constipation. Also, when urine sits in the bladder for long periods of time, bladder infections are more
+   likely to occur, so regular emptying keeps this part of the anatomy happy as well.
+</p>
+<h2> Our specialists</h2>
+<img src="{% static 'main/img/teacher_1.jpg' %}" , width="25%" title="Aleksandr Novikov">
+<img src="{% static 'main/img/teacher_3.jpg' %}" , width="25%" title="Tatsiana Markova">
+<img src="{% static 'main/img/teacher_2.jpg' %}" , width="25%" title="Sergey Galukin">
+<h2>Hostel</h2>
+<p>
+   For most dog lovers, leaving their furry family members alone for an extended period of time is something
+   they’d rather avoid. Dogs of all ages and temperaments can feel stressed, lonely, and bored when they spend
+   too much time alone – and nobody wants that for their beloved best friend.
+   But whether it’s an upcoming vacation, long days at work, or a move to a new home, there are many reasons
+   that you might have to take time away from your dog. Thankfully, there are different options for making sure
+   that your pet is happy, safe, and well-cared-for in these situations.
+   Dog boarding and dog daycare are professionally-provided services that can offer invaluable peace of mind
+   for families with dogs.
+</p>
+
+
+
+<h1>Leave your details and our specialist will contact you</h1>
+
+<form class="form" method="post">
+   {% csrf_token %}
+   {{ form.as_p }}
+   <button type="submit">Send</button>
+</form>
+
+
+<!--<p>{{ my_time }}</p>-->
+<!-- <img src="{% static 'main/img/doberman_3.jpg' %}", width="100%" >  -->
+
+{% endblock %}

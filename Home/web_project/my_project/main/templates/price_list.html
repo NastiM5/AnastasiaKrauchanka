@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Price List
+{% endblock %}
+
+
+{% block content %}
+<h1>Price List</h1>
+<ul>
+   {% for price in prices %}
+   <div class="b">{{ price.service }} </div>
+   <div class="b">{{ price.type }}</div>
+   <div class="b">{{ price.price }}</div>
+   {% endfor %}
+</ul>
+
+
+{% endblock %}

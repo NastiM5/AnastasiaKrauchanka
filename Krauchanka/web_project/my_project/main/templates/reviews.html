@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Reviews
+{% endblock %}
+
+
+{% block content %}
+<h2>Leave feedback</h2>
+<form method="post" enctype="multipart/form-data">
+   {% csrf_token %}
+   {{ form.as_p }}
+   <button type="submit">Send</button>
+</form>
+<hr>
+
+
+<h2>Our reviews</h2>
+
+{% for review in reviews|dictsortreversed:"date" %}
+<h2>{{ review.title }}</h2>
+<p>{{ review.comment }}</p>
+<p>Рейтинг: {{ review.rating }}/5</p>
+<img src="{{ review.image.url }}" width="40%" alt="Image" />
+<!-- <p>Автор: {{ user }}</p> -->
+<p>Дата: {{ review.date }}</p>
+{% endfor %}
+
+
+
+
+{% endblock %}
